@@ -33,7 +33,7 @@ endmodule
 module tt22n(input A, input B, input init, input freeze, output Q);
    wire Q1;
    // We can implement this with a majority gate with feedback
-   XXX handle freeze
+   // XXX handle freeze
    sky130_fd_sc_hd__maj3_1 maj(.X(Q1), .A(A), .B(B), .C(Q));
    assign Q = init ? 0 : Q1; // == !init & Q1"
 endmodule
